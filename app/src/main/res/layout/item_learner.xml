@@ -15,10 +15,13 @@
 
         <ImageView
             android:id="@+id/imBadge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintDimensionRatio="1:1"
             android:src="@drawable/ic_launcher_background"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvLearnerName"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView

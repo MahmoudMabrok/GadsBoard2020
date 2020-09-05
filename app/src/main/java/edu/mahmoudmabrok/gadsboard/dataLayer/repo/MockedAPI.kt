@@ -2,8 +2,9 @@ package edu.mahmoudmabrok.gadsboard.dataLayer.repo
 
 import edu.mahmoudmabrok.gadsboard.dataLayer.mdoel.TopLearner
 import edu.mahmoudmabrok.gadsboard.dataLayer.mdoel.TopLearnerIQ
-import io.reactivex.Single
 import kotlin.random.Random
+
+/*
 
 class MockedAPI : LeaderAPI {
     override fun loadTopLearner(): Single<List<TopLearner>> {
@@ -31,6 +32,7 @@ class MockedAPI : LeaderAPI {
 
     override fun submit(): Single<Unit> = Single.just(Unit)
 }
+*/
 
 val randome = Random(4445)
 

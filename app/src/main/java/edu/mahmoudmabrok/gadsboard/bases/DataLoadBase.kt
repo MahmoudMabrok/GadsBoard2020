@@ -1,6 +1,7 @@
 package edu.mahmoudmabrok.gadsboard.bases
 
 import android.os.Bundle
+import android.util.Log
 import io.reactivex.SingleObserver
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
@@ -32,6 +33,7 @@ abstract class DataLoadBase<T> : BaseFragment<T>() {
 
             override fun onError(e: Throwable) {
                 hideLoading()
+                Log.d("App", "ee ${e.message} ${e.localizedMessage}")
                 val msg = when (e) {
                     is HttpException -> {
                         when (e.code()) {

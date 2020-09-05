@@ -1,6 +1,7 @@
 package edu.mahmoudmabrok.gadsboard.ui.topIQ
 
 import android.view.View
+import com.bumptech.glide.Glide
 import edu.mahmoudmabrok.gadsboard.R
 import edu.mahmoudmabrok.gadsboard.bases.BaseViewHolder
 import edu.mahmoudmabrok.gadsboard.dataLayer.mdoel.TopLearnerIQ
@@ -13,5 +14,8 @@ class TopLearneerIQVH(itemView: View) : BaseViewHolder<TopLearnerIQ>(itemView) {
         itemView.tvLearnerName.text = item.name
         itemView.tvLearnerInfo.text =
             itemView.context.getString(R.string.learningIQ, item.score, item.country)
+
+        Glide.with(itemView.context).load(item.badgeUrl)
+            .into(itemView.imBadge)
     }
 }

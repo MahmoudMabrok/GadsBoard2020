@@ -12,10 +12,11 @@ import edu.mahmoudmabrok.gadsboard.dataLayer.repo.LeaderBoardRepo
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_top_learner.*
+import org.koin.android.ext.android.inject
 
 
 class TopLearnerFragment : DataLoadBase<List<TopLearner>>() {
-    val repo by lazy { LeaderBoardRepo() }
+    val repo: LeaderBoardRepo by inject()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
