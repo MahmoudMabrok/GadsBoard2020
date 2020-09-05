@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import edu.mahmoudmabrok.gadsboard.R
 import edu.mahmoudmabrok.gadsboard.ui.topHours.TopLearnerFragment
+import edu.mahmoudmabrok.gadsboard.ui.topIQ.TopSkillIQFragment
 
 private val TAB_TITLES = arrayOf(
         R.string.tab_text_1,
@@ -19,7 +20,7 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
         return when(position){
             0 -> TopLearnerFragment()
 
-            else -> TopLearnerFragment()
+            else -> TopSkillIQFragment()
         }
     }
 

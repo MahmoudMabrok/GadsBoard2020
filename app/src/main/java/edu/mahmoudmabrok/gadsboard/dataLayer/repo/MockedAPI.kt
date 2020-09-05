@@ -34,5 +34,5 @@ class MockedAPI : LeaderAPI {
 
 val randome = Random(4445)
 
-fun createTopPlayer(name: String = "Mahmoud") = TopLearner(name, "${randome.nextInt(390)} Hour")
-fun createTopPlayerIQ() = TopLearnerIQ("Mahmoud", "${randome.nextInt(301)} IQ")
+fun createTopPlayer(name: String = "Mahmoud") = TopLearner(name, randome.nextInt(390), "aaaa", "")
+fun createTopPlayerIQ() = TopLearnerIQ("Mahmoud", randome.nextInt(300), "aaaa", "")

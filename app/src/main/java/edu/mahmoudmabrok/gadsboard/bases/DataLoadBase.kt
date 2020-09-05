@@ -27,7 +27,7 @@ abstract class DataLoadBase<T> : BaseFragment<T>() {
 
             override fun onSuccess(t: T) {
                 hideLoading()
-                onSuccess(t)
+                onSuccessDo(t)
             }
 
             override fun onError(e: Throwable) {
@@ -49,7 +49,7 @@ abstract class DataLoadBase<T> : BaseFragment<T>() {
         }
     }
 
-    abstract fun onSuccess(data: T)
+    abstract fun onSuccessDo(data: T)
     abstract fun onError(error: String)
     abstract fun showLoading()
     abstract fun hideLoading()
