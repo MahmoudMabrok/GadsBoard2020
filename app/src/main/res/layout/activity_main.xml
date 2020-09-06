@@ -50,6 +50,10 @@
             app:tabSelectedTextColor="@color/white"
             app:tabIndicatorColor="@color/white"
             app:tabIndicatorHeight="4dp"
+            app:tabGravity="fill"
+            app:tabIndicatorGravity="bottom"
+            app:tabTextAppearance="@style/nav"
+            app:tabTextColor="@color/tabColorUNselected"
             android:background="?attr/colorPrimary" />
     </com.google.android.material.appbar.AppBarLayout>
 
