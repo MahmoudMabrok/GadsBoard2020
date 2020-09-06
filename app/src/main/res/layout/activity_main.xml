@@ -19,11 +19,12 @@
                 android:id="@+id/title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="11"
+                android:layout_weight="1"
                 android:minHeight="?actionBarSize"
                 android:padding="@dimen/appbar_padding"
                 android:text="@string/leaderboard"
                 android:textAlignment="viewStart"
+                android:textAllCaps="true"
                 android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
 
             <TextView
