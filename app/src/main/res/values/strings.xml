@@ -13,4 +13,9 @@
     <string name="last_name">Last Name</string>
     <string name="project_submission">Project Submission</string>
     <string name="submit">Submit</string>
+    <string name="are_you_sure">Are You Sure </string>
+    <string name="mar">\?</string>
+    <string name="yes">YES</string>
+    <string name="submisssion_successful">Submisssion Successful</string>
+    <string name="submisssion_not_successful">Submisssion not Successful</string>
 </resources>
