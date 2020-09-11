@@ -1,6 +1,5 @@
 package edu.mahmoudmabrok.gadsboard.dataLayer.repo
 
-import edu.mahmoudmabrok.gadsboard.dataLayer.mdoel.Submit
 import edu.mahmoudmabrok.gadsboard.dataLayer.mdoel.TopLearner
 import edu.mahmoudmabrok.gadsboard.dataLayer.mdoel.TopLearnerIQ
 import io.reactivex.Single
@@ -24,7 +23,17 @@ class LeaderBoardRepo(private val api: LeaderAPI) : KoinComponent {
         }
     }
 
-    fun submit(body: Submit): Single<Unit> {
-        return api.submit(body = body)
+    fun submit(
+        firstName: String,
+        lastName: String,
+        emailtName: String,
+        link: String
+    ): Single<Unit> {
+        return api.submit(
+            firstName = firstName,
+            lastName = lastName,
+            emailtName = emailtName,
+            link = link
+        )
     }
 }

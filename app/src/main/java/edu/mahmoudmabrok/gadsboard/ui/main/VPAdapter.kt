@@ -8,16 +8,17 @@ import edu.mahmoudmabrok.gadsboard.R
 import edu.mahmoudmabrok.gadsboard.ui.topHours.TopLearnerFragment
 import edu.mahmoudmabrok.gadsboard.ui.topIQ.TopSkillIQFragment
 
-private val TAB_TITLES = arrayOf(
+
+class VPAdapter(private val context: Context, fm: FragmentManager) :
+    FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+
+    private val TAB_TITLES = arrayOf(
         R.string.tab_text_1,
         R.string.tab_text_2
-)
-
-class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
-    : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+    )
 
     override fun getItem(position: Int): Fragment {
-        return when(position){
+        return when (position) {
             0 -> TopLearnerFragment()
 
             else -> TopSkillIQFragment()

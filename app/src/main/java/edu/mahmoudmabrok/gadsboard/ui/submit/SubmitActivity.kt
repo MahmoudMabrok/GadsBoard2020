@@ -5,14 +5,12 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import edu.mahmoudmabrok.gadsboard.R
-import edu.mahmoudmabrok.gadsboard.dataLayer.mdoel.Submit
 import edu.mahmoudmabrok.gadsboard.dataLayer.repo.LeaderBoardRepo
 import edu.mahmoudmabrok.gadsboard.ui.dialogs.Dialogs
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_sbmit.*
-import kotlinx.android.synthetic.main.activity_sbmit.view.*
 import org.koin.android.ext.android.inject
 
 
@@ -39,10 +37,8 @@ class SubmitActivity : AppCompatActivity() {
         }
 
         btnSubmit?.setOnClickListener {
-            Dialogs.yesDialog(this) {
-                doOnValidate {
-                    upload()
-                }
+            doOnValidate {
+                upload()
             }
         }
 
@@ -51,7 +47,8 @@ class SubmitActivity : AppCompatActivity() {
     private fun doOnValidate(upload: (Unit) -> Unit) {
         val inputs = listOf(
             editTextTextPersonName, editTextTextPersonName2,
-            edEmail.edGithubLink
+            edEmail,
+            edGithubLink
         )
 
         val nonValid = inputs.filter { it.text.toString().isNullOrEmpty() }
@@ -65,16 +62,23 @@ class SubmitActivity : AppCompatActivity() {
     }
 
     private fun upload() {
-        repo.submit(Submit("", "", "", ""))
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe({
-                Dialogs.stateDialog(this)
-            }, {
-                Dialogs.stateDialog(this, false)
-            }).apply {
-                bag.add(this)
-            }
+        Dialogs.yesDialog(this) {
+            val firstName = editTextTextPersonName.text.toString()
+            val lastName = editTextTextPersonName2.text.toString()
+            val email = edEmail.text.toString()
+            val link = edGithubLink.text.toString()
+            repo.submit(firstName, lastName, email, link)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({
+                    Dialogs.stateDialog(this)
+                }, {
+                    Dialogs.stateDialog(this, false)
+                }).apply {
+                    bag.add(this)
+                }
+        }
+
     }
 
     override fun onDestroy() {
