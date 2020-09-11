@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import edu.mahmoudmabrok.gadsboard.R
 import edu.mahmoudmabrok.gadsboard.ui.main.MainActivity
 
-class SplachActivity : AppCompatActivity() {
+class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splach)

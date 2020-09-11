@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 import edu.mahmoudmabrok.gadsboard.R
-import edu.mahmoudmabrok.gadsboard.ui.submit.SbmitActivity
+import edu.mahmoudmabrok.gadsboard.ui.submit.SubmitActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         tabs.setupWithViewPager(viewPager)
 
         submit?.setOnClickListener {
-            startActivity(Intent(this, SbmitActivity::class.java))
+            startActivity(Intent(this, SubmitActivity::class.java))
         }
     }
 }

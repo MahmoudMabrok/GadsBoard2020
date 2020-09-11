@@ -10,4 +10,8 @@
     <color name="tabColorUNselected">#535151</color>
     <color name="tvSubTitle">#535151</color>
     <color name="BG">#535151</color>
+    <color name="orange">#FFAE45</color>
+    <color name="start">#382917</color>
+    <color name="center">#7F6A50</color>
+    <color name="end">#382917</color>
 </resources>
