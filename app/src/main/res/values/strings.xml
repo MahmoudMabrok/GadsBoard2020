@@ -5,12 +5,12 @@
     <string name="internet_error">Check Your Internet</string>
     <string name="learningHours">%d Learning Hours, %s</string>
     <string name="learningIQ">%d Skill IQ score Hours, %s</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="leaderboard">LeaderBoard</string>
-    <string name="submit">Submit</string>
     <string name="github_link">Project on Github (link)</string>
     <string name="email">Email</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
+    <string name="project_submission">Project Submission</string>
+    <string name="submit">Submit</string>
 </resources>
