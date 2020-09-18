@@ -1,4 +1,6 @@
 # GadsBoard2020
+[![CodeFactor](https://www.codefactor.io/repository/github/mahmoudmabrok/gadsboard2020/badge)](https://www.codefactor.io/repository/github/mahmoudmabrok/gadsboard2020)
+
 Building a GADS Leaderboard Mobile Application
 
 ## Description
